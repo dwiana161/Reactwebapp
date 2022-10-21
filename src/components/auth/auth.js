@@ -3,15 +3,15 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Grid } from "semantic-ui-react";
+import UserList from "../List/List";
 
-
-const Detail = () => {
+const Login = () => {
 
 
     return (
         
-    <div>Detail</div>
+    <div>Login</div>
     )
 }
 
-export default Detail;
+export default Login;
