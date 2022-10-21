@@ -21,7 +21,7 @@ const UserList = ({userData, loading}) => {
                         <Image avatar src={item.avatar} />
                         <List.Content>
                             <List.Header as='h4' className='name'>{item.first_name} {item.last_name}</List.Header>
-                            <List.Description>
+                            <List.Description className='email'>
                                     {item.email}
                             </List.Description>
                         </List.Content>

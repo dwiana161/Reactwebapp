@@ -7,7 +7,8 @@
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
-    background-color: var(--primary-color);
+    background-color: var(--pallete-color);
+    margin-bottom: 20vh;
 
     .btn-prev {
         margin-bottom: 1rem;
@@ -18,5 +19,20 @@
     .btn-next {
         width: 50%;
     }
+}
 
+.navbar {
+
+    .btn-logout{
+        border: 2px solid var(--pallete-color);
+        width: 80px;
+        border-radius: 10px;
+        background: var(--danger-light-color);
+        box-shadow: var(--box-shadow);
+    }
+
+    .item{
+        color: var(--text-light-color) !important;
+        text-align: center;
+    }
 }

@@ -2,14 +2,16 @@ import axios from "axios";
 import React, { useCallback } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { Item } from "semantic-ui-react";
+import { useNavigate, useParams } from "react-router-dom";
+import { Button, Icon, Item } from "semantic-ui-react";
 import "./detail.scss";
 
 
 const Detail = () => {
     const id = useParams();
     console.log('id', id.id);
+
+    const navigate = useNavigate();
 
     const [userDetail, setUserDetail] = useState();
     const idData = id.id;
@@ -43,11 +45,16 @@ const Detail = () => {
             <Item.Image size='tiny' src={userDetail?.avatar} />
 
             <Item.Content>
-                <Item.Header as='a'>{userDetail?.first_name} {userDetail?.last_name}</Item.Header>
+                <Item.Header as='h4'>{userDetail?.first_name} {userDetail?.last_name}</Item.Header>
                 <Item.Meta>{userDetail?.email}</Item.Meta>
             </Item.Content>
             </Item>
         </Item.Group>
+
+        <Button icon labelPosition='left' onClick={() => navigate('/users')}>
+          <Icon name='left arrow' />
+          Kembali
+        </Button>
         </div>
     )
 }
