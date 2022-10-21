@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import { Header, Image, List } from 'semantic-ui-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import "./List.scss";
 
 const UserList = ({userData, loading}) => {
 
@@ -12,25 +13,21 @@ const UserList = ({userData, loading}) => {
 <>
             {
                 loading ? <Header as='h1'>Loading...</Header> :
-                userData.filter((item) => {              //filter by searchPoke results
-                    if (searchUser === "") {
-                        return item
-                    } else if (
-                        item.name.toLowerCase().includes(searchUser.toLowerCase())){
-                            return item
-                        }
-                }).map((item) => {
+                userData.map((item) => {
                     return(
-                    <>
+                    <div className='list-user'>
                     <List divided relaxed  onClick={() => (navigate(`/users/${item.id}`))}>
                         <List.Item>
                         <Image avatar src={item.avatar} />
                         <List.Content>
-                            <List.Header as='a'>{item.first_name} {item.last_name}</List.Header>
+                            <List.Header as='h4' className='name'>{item.first_name} {item.last_name}</List.Header>
+                            <List.Description>
+                                    {item.email}
+                            </List.Description>
                         </List.Content>
                         </List.Item>
                         </List>
-                    </>
+                    </div>
                     )
                 })
             }

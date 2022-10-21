@@ -1,0 +1,10 @@
+@import "../../style/mixins.scss";
+
+.detail-card {
+    @include card();
+    margin-top: 12vh;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}

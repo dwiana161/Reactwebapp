@@ -3,7 +3,8 @@ import React, { useCallback } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Button, Grid, Image, Item } from "semantic-ui-react";
+import { Item } from "semantic-ui-react";
+import "./detail.scss";
 
 
 const Detail = () => {
@@ -36,7 +37,7 @@ const Detail = () => {
       }, [])
 
     return (
-        
+        <div className="detail-card">
         <Item.Group>
             <Item>
             <Item.Image size='tiny' src={userDetail?.avatar} />
@@ -47,6 +48,7 @@ const Detail = () => {
             </Item.Content>
             </Item>
         </Item.Group>
+        </div>
     )
 }
 

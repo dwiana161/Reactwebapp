@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Grid } from "semantic-ui-react";
 import UserList from "../List/List";
+import "./home.scss";
 
 const Home = () => {
     const [users, setUsers] = useState([]);
@@ -23,30 +24,38 @@ const Home = () => {
     },[])
 
     return (
-        <>
+        <div className="home">
         <UserList userData={users} loading={loading}/>
 
         <Grid>
         <Grid.Column textAlign="center">
         <Button 
+            inverted
+            basic 
+            color='red'
             content='Previous' 
             icon='left arrow' 
-            labelPosition='left' 
+            labelPosition='left'
+            className="btn-prev" 
             onClick={() => {
                 dataUsers(1);
             }}
         />
-        <Button 
+        <Button
+            inverted 
+            basic 
+            color='red'
             content='Next' 
             icon='right arrow' 
-            labelPosition='right' 
+            labelPosition='right'
+            className="btn-next" 
             onClick={() => {
                 dataUsers(2);
             }}
         />
         </Grid.Column>
     </Grid>
-    </>
+    </div>
     )
 }
 

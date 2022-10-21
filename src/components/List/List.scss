@@ -1,0 +1,11 @@
+@import "../../style/mixins.scss";
+
+.list-user {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .name {
+        color: rgb(70, 208, 160);
+    }
+
+}
