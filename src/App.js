@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-r
 import Login from './components/auth/auth';
 import Detail from './components/detail/detail';
 import Home from './components/home/home';
+import "./style/index.scss";
 
 const App = () => {
 
   const { id }= useParams();
 
   return (
+    <div className='container'>
     <Router>
       <Routes>
         <Route>
@@ -18,6 +20,7 @@ const App = () => {
         </Route>
       </Routes>
     </Router>
+    </div>
   );
 }
 

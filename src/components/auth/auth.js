@@ -40,7 +40,7 @@ const Login = () => {
             setErrorMessages({ name: "pass", message: errors.pass });
           } else {
             setIsSubmitted(true);
-            navigate('bookstore')
+            navigate('users')
           }
         } else {
           // Username not found
@@ -79,7 +79,7 @@ const Login = () => {
         <div className="app">
           <div className="login-form">
             <div className="title">Sign In</div>
-            {isSubmitted ? <Link to='/bookstore'></Link> : renderForm}
+            {isSubmitted ? <Link to='/users'></Link> : renderForm}
           </div>
         </div>
       );
