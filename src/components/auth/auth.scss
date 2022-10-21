@@ -1,0 +1,24 @@
+@import "../../style/mixins.scss";
+
+.auth-form {
+    @include card();
+    margin-top: 20vh;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .title {
+        margin-bottom: 1rem;
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .btn-submit {
+        @include btn();
+        margin-bottom: 1rem;
+        background: var(--primary-color);
+        color: var(--text-light-color);
+    }
+
+}
+

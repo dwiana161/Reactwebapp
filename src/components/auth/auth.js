@@ -1,10 +1,10 @@
-import axios from "axios";
 import React from "react";
-import { useEffect } from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Button, Checkbox, Form } from 'semantic-ui-react'
-import UserList from "../List/List";
+import { Button, Form, Header } from 'semantic-ui-react';
+import "./auth.scss";
+
+
 
 const Login = () => {
     const navigate = useNavigate();
@@ -57,20 +57,21 @@ const Login = () => {
       // JSX code for login form
       const renderForm = (
     <>
-        <Form>
-            <Form.Field>
+        <Form className="auth-form">
+          <Header className="title" as='h2'>Sign In</Header>
+            <Form.Field className="form">
             <label>Username</label>
             <input type="text" name="uname" required placeholder='username' />
             {renderErrorMessage("uname")}
             </Form.Field>
-            <Form.Field>
+            <Form.Field className="form">
             <label>Password</label>
             <input type="password" name="pass" required placeholder='Last Name' />
             {renderErrorMessage("pass")}
             </Form.Field>
             <Form.Field>
             </Form.Field>
-            <Button type='submit' onClick={handleSubmit}>Submit</Button>
+            <Button className="btn-submit" type='submit' onClick={handleSubmit}>Submit</Button>
         </Form>
         </>
       );
@@ -78,7 +79,6 @@ const Login = () => {
       return (
         <div className="app">
           <div className="login-form">
-            <div className="title">Sign In</div>
             {isSubmitted ? <Link to='/users'></Link> : renderForm}
           </div>
         </div>
