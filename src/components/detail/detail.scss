@@ -1,6 +1,7 @@
 @import "../../style/mixins.scss";
 
 .detail-card {
+    background-color: var(--pallete-color)!important;
     @include card();
     margin-top: 12vh;
     width: 50%;
