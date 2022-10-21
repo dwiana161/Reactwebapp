@@ -2,8 +2,8 @@ import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import CardList from "../card/card";
 import { Button, Grid } from "semantic-ui-react";
+import UserList from "../List/List";
 
 const Home = () => {
     const [users, setUsers] = useState([]);
@@ -24,7 +24,7 @@ const Home = () => {
 
     return (
         <>
-        <CardList userList={users} loading={loading}/>
+        <UserList userData={users} loading={loading}/>
 
         <Grid>
         <Grid.Column textAlign="center">
