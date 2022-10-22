@@ -25,10 +25,12 @@ Open [http://localhost:3000](http://localhost:3000) to view locally it in your b
 
 ## Deployment
 The app has deployed on Heroku.\
+[Link](https://userlist-reactapp.herokuapp.com/) to visit the app.
 
 ## Overview
 
 * Login
+username = user1 password = user1
 ![Capture](https://user-images.githubusercontent.com/55675935/197307188-245745de-6e19-4431-8e2c-1220a0e23042.PNG)
 
 * UserList
